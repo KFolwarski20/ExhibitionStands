@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" media="screen" href="styles.css">
+        <link rel="shortcut icon" type="image/x-icon" href="IcgExpoIcon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="scripts/loading-animation.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <title>IcgExpo - Kontakt</title> 
+    </head> 
+    <body> 
+        <div class="preloader"></div>
+        <div class="hamburger-menu">
+            <span></span>
+          </div>
+          <nav class="navbar-menu">
+            <ul class="menu-listing">
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="o_nas.html">O nas</a></li>
+                <li><a href="realizacje.html">Realizacje</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <script>
+          $(".hamburger-menu").click(function() {
+              $(".hamburger-menu").toggleClass("active");
+                  $(".navbar-menu").toggleClass("active");
+                      $(scrollTo(0,0));
+          });
+      </script>
+            <nav class="main-menu">
+                <ul>
+                    <a href="index.html"><img class ="logo" src="images/logo_menu.png" alt="Logo"></a>
+                    <li class="menu-item"><a href="index.html">Strona Główna</a></li>
+                    <li class="menu-item"><a href="o_nas.html">O Nas</a></li>
+                    <li class="menu-item"><a href="realizacje.html">Realizacje</a></li>
+                    <li class="menu-item"><a class="current" href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="contact-container">
+                <div class="map-container">
+                    <div class="address-container">
+                        <p class="address-item">IcgExpo, NIP: 735-277-67-37</p>
+                        <p class="address-item">Chabówka 268a, 34-720 Chabówka</p>
+                        <a class="address-item" href="tel:605-512-209">605-512-209</a>
+                        <a class="address-item" href="tel:889-450-811">889-450-811</a>
+                        <a class="address-item" href="mailto:biuro@icghome.pl">biuro@icghome.pl</a>
+                    </div>
+                    <iframe src="https://maps.google.com/maps?q=Chabówka268a&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="yes"></iframe>
+                </div>
+                <div class="rfq-container">
+                    <form action="scripts/submit.php" method="post">
+                        <h1 id="rfq">Wyślij do nas zapytanie ofertowe</h1>
+                        <label for="imie">Imię:</label>
+                        <input type="text" id="imie" name="imie" required><br><br>
+                        
+                        <label for="nazwisko">Nazwisko:</label>
+                        <input type="text" id="nazwisko" name="nazwisko" required><br><br>
+                        
+                        <label for="email">Adres email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        
+                        <label for="nr_telefonu">Numer telefonu:</label>
+                        <input type="tel" id="nr_telefonu" name="nr_telefonu" required pattern="\d{3}-\d{3}-\d{3}" oninput="this.value = this.value.replace(/(\d{3})(?=\d)/g, '$1-');"><br><br>
+                        
+                        <label for="tresc">Treść wiadomości:</label>
+                        <textarea id="tresc" name="tresc" required></textarea><br><br>
+                        
+                        <input type="submit" value="Wyślij">
+                    </form>
+                </div>
+            </div>
+        <footer>
+            <div>
+                <p>Copyright © 2023. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </footer> 
+    </body> 
+</html>

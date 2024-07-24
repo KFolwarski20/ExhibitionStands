@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" media="screen" href="styles.css">
+        <link rel="shortcut icon" type="image/x-icon" href="IcgExpoIcon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="scripts/loading-animation.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+        <title>IcgExpo - O nas</title> 
+    </head> 
+    <body>
+        <div class="preloader"></div>
+        <div class="hamburger-menu">
+            <span></span>
+          </div>
+          <nav class="navbar-menu">
+            <ul class="menu-listing">
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="o_nas.html">O nas</a></li>
+                <li><a href="realizacje.html">Realizacje</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <script>
+          $(".hamburger-menu").click(function() {
+              $(".hamburger-menu").toggleClass("active");
+                  $(".navbar-menu").toggleClass("active");
+                      $(scrollTo(0,0));
+          });
+      </script> 
+        <nav class="main-menu">
+            <ul>
+                <a href="index.html"><img class ="logo" src="images/logo_menu.png" alt="Logo"></a>
+                <li class="menu-item"><a href="index.html">Strona Główna</a></li>
+                <li class="menu-item"><a class="current" href="o_nas.html">O Nas</a></li>
+                <li class="menu-item"><a href="realizacje.html">Realizacje</a></li>
+                <li class="menu-item"><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <h1 style="margin-top: 1.5em;">Stawiamy na ludzi i jakość - Poznaj Naszą Misję i Wartości!</h1>
+        <div class="company-description">
+            <p>Jesteśmy Polską firmą rodzinną, która buduje swoją pozycję i doświadczenie od 2007 roku.
+                Wszystkie projekty realizujemy we <b>własnym zakresie</b>. Od samego początku istnienia firmy
+                przyświeca nam dewiza: <b><i>"Jeśli chcesz mieć coś zrobione dobrze, zrób to sam".</i></b>
+                Tego typu podejście doprowadziło do rozwoju na wielu płaszczyznach. Biuro projektowe
+                przeleje na papier najśmielsze pomysły naszych klientów, a <b>doświadczeni pracownicy</b> 
+                i <b>bogaty park maszynowy</b> pozwala ów pomysły zmaterializować. W pełni wyposażona stolarnia, lakiernia,
+                centrum obróbcze oraz możliwość obróbki stali pozwalają nam wykonać we własnym zakresie 
+                <b>wszystkie elementy stoiska targowego</b>, umożliwiając dbanie o <b>jakość</b> na każdym etapie produkcji.
+            </p>
+        </div>
+        <h1>Odkryj potencjał naszego zaplecza maszynowego i przekonaj się, że nie ma dla nas rzeczy niemożliwych!</h1>
+        <div class="company-description">
+            <p>Dzięki najnowszym technologiom i nowoczesnym maszynom możemy spełnić najbardziej wymagające potrzeby naszych klientów.</p>
+
+            <p><b>Własna stolarnia</b> o powierzchni 450m² wyposażona w:
+                <ul>
+                    <li>wszystkie stolarskie maszyny</li>
+                    <li>lakiernię</li>
+                    <li>numeryczne centrum obróbcze</li>
+                </ul>
+            </p>
+            <p><b>Własna ślusarnia</b> o powierzchni ok. 600m² wyposażona w:
+                <ul>
+                    <li>spawarki mig, mag, tig</li>
+                    <li>frezarki</li>
+                    <li>giętarkę</li>
+                    <li>walcarkę</li>
+                    <li>ploter plazmowy</li>
+                    <li>dużą lakiernię proszkową</li>
+                </ul>
+            </p>
+            <p>
+                Zaplecze maszynowe ślusarni umożliwia nam <b>obróbkę stali czarnych, nierdzewnych
+                i metali nieżelaznych</b>. Zaufaj naszemu doświadczeniu i pozwalaj nam pomóc Ci w osiągnięciu Twoich celów!
+            </p>
+        </div>
+        <h1>Gdzie zostaliśmy docenieni za naszą pracę</h1>
+        <div class="company-description">
+            <p>Nasze projekty realizowane są w różnych częściach świata, 
+                a na mapie możesz zobaczyć, gdzie już zostaliśmy zaproszeni do działania.
+            </p>
+            <div id="map"></div>
+        </div>
+        <footer>
+            <div>
+                <p>Copyright © 2023. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </footer> 
+        <script src="scripts/map_to_sign_realizations.js"></script>
+    </body> 
+</html>
